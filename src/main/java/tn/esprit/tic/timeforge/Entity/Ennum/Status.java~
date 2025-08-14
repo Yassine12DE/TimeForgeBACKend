@@ -1,0 +1,5 @@
+package tn.esprit.tic.timeforge.Entity;
+
+public enum Status {
+    SENDT,READ
+}
