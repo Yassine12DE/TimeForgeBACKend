@@ -25,6 +25,9 @@ public class User  {
     private String password;
     private String resetpasswordtoken;
     private int cin;
+    private int level = 1 ;
+    private int xp = 0;
+    private int streak;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="teamlead")
     @JsonIgnore
     private Set<Project> Projects;

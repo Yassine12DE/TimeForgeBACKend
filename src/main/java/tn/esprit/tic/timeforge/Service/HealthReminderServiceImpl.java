@@ -63,7 +63,7 @@ public class HealthReminderServiceImpl implements HealthReminderService {
         goalsRepository.save(goal);
     }
     @Override
-    @Scheduled(fixedRate = 15000) // 1h30 en millisecondes
+    //@Scheduled(fixedRate = 15000) // 1h30 en millisecondes
     public void createHealthReminders() {
         List<Goals> activeGoals = goalsRepository.findByChronicActiveTrue();
 

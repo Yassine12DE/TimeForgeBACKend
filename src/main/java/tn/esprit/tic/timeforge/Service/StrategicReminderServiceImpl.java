@@ -22,7 +22,7 @@ public class StrategicReminderServiceImpl  {
     @Autowired
     private StrategicReminderRepository strategicReminderRepository;
 
-    @Scheduled(cron = "*/15 * * * * *")
+  //  @Scheduled(cron = "*/15 * * * * *")
     public void checkGoalEndDatesAndSendReminders() {
         List<Goals> goals = goalsRepository.findAll();
 

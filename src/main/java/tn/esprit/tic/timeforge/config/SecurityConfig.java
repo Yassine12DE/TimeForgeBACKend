@@ -37,7 +37,7 @@ public class SecurityConfig {
                     .csrf(AbstractHttpConfigurer::disable)
                     .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                     .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**", "/visiteur/**","/api/health-reminders/**","/api/strategic-reminders/**","/api/goals/**","/tasks/**","/api/goals/taksbygoals","/api/translate","/chat-socket/**","/users/**","/api/health-reminders/{goalId}/chronic/{activate}/**","/rewards/**","/dashboard/**","/api/ai/ask","/admin/stats").permitAll()
+                        .requestMatchers("/auth/**", "/visiteur/**","/api/health-reminders/**","/api/strategic-reminders/**","/api/goals/**","/tasks/**","/statistics/**","/api/goals/taksbygoals","/api/translate","/chat-socket/**","/users/**","/api/health-reminders/{goalId}/chronic/{activate}/**","/rewards/**","/dashboard/**","/api/ai/ask","/admin/stats").permitAll()
 
                         .anyRequest().authenticated()
                 )

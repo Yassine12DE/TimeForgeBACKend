@@ -16,6 +16,7 @@ public class Reward  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate rewardDate ;
+    private int rewardAmount = 0;
 
 
     @ManyToOne

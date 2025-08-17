@@ -61,7 +61,7 @@ public class RewardService implements IntRewardService{
     }
 
 
-    @Scheduled(cron = "0 05 16 * * ?")
+    //@Scheduled(cron = "0 05 16 * * ?")
 
     @Override
     public void autoAssign() {

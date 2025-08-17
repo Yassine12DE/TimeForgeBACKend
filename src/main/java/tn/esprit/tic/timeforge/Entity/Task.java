@@ -31,6 +31,7 @@ public class Task  {
     private long durationInDays;
     private LocalDateTime updatedAt;
     private int estimatedHours;
+    private int taskCredit = 0;
 
     @ManyToOne
     @JoinColumn(name = "employee11Id",nullable = true)
@@ -41,7 +42,7 @@ public class Task  {
     User teamleader;
     @ManyToOne
     @JoinColumn( name = "projectId",nullable = true)
-    @JsonIgnoreProperties("tasks")
+    @JsonIgnoreProperties("taskss")
     Project project;
     @ManyToOne
     @JsonIgnore

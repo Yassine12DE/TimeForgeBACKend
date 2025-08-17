@@ -32,11 +32,11 @@ public class UserController {
     }
 
     @GetMapping("/api/user")
-    public Long retreiveIdfromtoken(@RequestHeader("Authorization") String authheader) {
+    public ResponseEntity<User> retreiveIdfromtoken(@RequestHeader("Authorization") String authheader) {
         String token = authheader.substring(7);
         String username= jwtUtil.extractUsername(token);
         Optional<User> user =userRepository.findByUsername(username);
-        return user.get().getIdUser();
+        return new ResponseEntity<>(user.get(),HttpStatus.OK);
         }
 
 }

@@ -41,6 +41,7 @@ public class TaskController {
     public List<Project> getallprojetbyuser(@PathVariable Long id) {
         return intTaskService.getallprojetbyidLead(id);
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<Task> updateTask(@PathVariable Long id, @RequestBody Task updatedTask) {
 
